@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ACC06A3615BAEB08009A751D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC06A3515BAEB08009A751D /* UIKit.framework */; };
+		ACC06A3815BAEB08009A751D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC06A3715BAEB08009A751D /* Foundation.framework */; };
+		ACC06A3A15BAEB08009A751D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC06A3915BAEB08009A751D /* CoreGraphics.framework */; };
+		ACC06A4015BAEB08009A751D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACC06A3E15BAEB08009A751D /* InfoPlist.strings */; };
+		ACC06A4215BAEB08009A751D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC06A4115BAEB08009A751D /* main.m */; };
+		ACC06A4615BAEB08009A751D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC06A4515BAEB08009A751D /* AppDelegate.m */; };
+		ACC06A4915BAEB08009A751D /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC06A4715BAEB08009A751D /* MainStoryboard_iPhone.storyboard */; };
+		ACC06A4C15BAEB08009A751D /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC06A4A15BAEB08009A751D /* MainStoryboard_iPad.storyboard */; };
+		ACC06A4F15BAEB08009A751D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC06A4E15BAEB08009A751D /* FirstViewController.m */; };
+		ACC06A5115BAEB08009A751D /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC06A5015BAEB08009A751D /* first.png */; };
+		ACC06A5315BAEB08009A751D /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC06A5215BAEB08009A751D /* first@2x.png */; };
+		ACC06A5615BAEB08009A751D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC06A5515BAEB08009A751D /* SecondViewController.m */; };
+		ACC06A5815BAEB08009A751D /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC06A5715BAEB08009A751D /* second.png */; };
+		ACC06A5A15BAEB08009A751D /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC06A5915BAEB08009A751D /* second@2x.png */; };
+		ACC06A6215BAEB08009A751D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC06A6115BAEB08009A751D /* SenTestingKit.framework */; };
+		ACC06A6315BAEB08009A751D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC06A3515BAEB08009A751D /* UIKit.framework */; };
+		ACC06A6415BAEB08009A751D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC06A3715BAEB08009A751D /* Foundation.framework */; };
+		ACC06A6C15BAEB08009A751D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACC06A6A15BAEB08009A751D /* InfoPlist.strings */; };
+		ACC06A6F15BAEB09009A751D /* fb_videoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC06A6E15BAEB09009A751D /* fb_videoTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ACC06A6515BAEB08009A751D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACC06A2815BAEB07009A751D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACC06A3015BAEB08009A751D;
+			remoteInfo = "fb-video";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ACC06A3115BAEB08009A751D /* fb-video.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fb-video.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACC06A3515BAEB08009A751D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		ACC06A3715BAEB08009A751D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ACC06A3915BAEB08009A751D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ACC06A3D15BAEB08009A751D /* fb-video-Info.plist */ = {isa = PBXFileReference; path = "fb-video-Info.plist"; sourceTree = "<group>"; };
+		ACC06A3F15BAEB08009A751D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ACC06A4115BAEB08009A751D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ACC06A4315BAEB08009A751D /* fb-video-Prefix.pch */ = {isa = PBXFileReference; path = "fb-video-Prefix.pch"; sourceTree = "<group>"; };
+		ACC06A4415BAEB08009A751D /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		ACC06A4515BAEB08009A751D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ACC06A4815BAEB08009A751D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		ACC06A4B15BAEB08009A751D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		ACC06A4D15BAEB08009A751D /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
+		ACC06A4E15BAEB08009A751D /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		ACC06A5015BAEB08009A751D /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		ACC06A5215BAEB08009A751D /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		ACC06A5415BAEB08009A751D /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
+		ACC06A5515BAEB08009A751D /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		ACC06A5715BAEB08009A751D /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		ACC06A5915BAEB08009A751D /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		ACC06A6015BAEB08009A751D /* fb-videoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fb-videoTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACC06A6115BAEB08009A751D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		ACC06A6915BAEB08009A751D /* fb-videoTests-Info.plist */ = {isa = PBXFileReference; path = "fb-videoTests-Info.plist"; sourceTree = "<group>"; };
+		ACC06A6B15BAEB08009A751D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ACC06A6D15BAEB09009A751D /* fb_videoTests.h */ = {isa = PBXFileReference; path = fb_videoTests.h; sourceTree = "<group>"; };
+		ACC06A6E15BAEB09009A751D /* fb_videoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fb_videoTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ACC06A2E15BAEB08009A751D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACC06A3615BAEB08009A751D /* UIKit.framework in Frameworks */,
+				ACC06A3815BAEB08009A751D /* Foundation.framework in Frameworks */,
+				ACC06A3A15BAEB08009A751D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACC06A5C15BAEB08009A751D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACC06A6215BAEB08009A751D /* SenTestingKit.framework in Frameworks */,
+				ACC06A6315BAEB08009A751D /* UIKit.framework in Frameworks */,
+				ACC06A6415BAEB08009A751D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ACC06A2615BAEB07009A751D = {
+			isa = PBXGroup;
+			children = (
+				ACC06A3B15BAEB08009A751D /* fb-video */,
+				ACC06A6715BAEB08009A751D /* fb-videoTests */,
+				ACC06A3415BAEB08009A751D /* Frameworks */,
+				ACC06A3215BAEB08009A751D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ACC06A3215BAEB08009A751D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ACC06A3115BAEB08009A751D /* fb-video.app */,
+				ACC06A6015BAEB08009A751D /* fb-videoTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ACC06A3415BAEB08009A751D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ACC06A3515BAEB08009A751D /* UIKit.framework */,
+				ACC06A3715BAEB08009A751D /* Foundation.framework */,
+				ACC06A3915BAEB08009A751D /* CoreGraphics.framework */,
+				ACC06A6115BAEB08009A751D /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ACC06A3B15BAEB08009A751D /* fb-video */ = {
+			isa = PBXGroup;
+			children = (
+				ACC06A4415BAEB08009A751D /* AppDelegate.h */,
+				ACC06A4515BAEB08009A751D /* AppDelegate.m */,
+				ACC06A4715BAEB08009A751D /* MainStoryboard_iPhone.storyboard */,
+				ACC06A4A15BAEB08009A751D /* MainStoryboard_iPad.storyboard */,
+				ACC06A4D15BAEB08009A751D /* FirstViewController.h */,
+				ACC06A4E15BAEB08009A751D /* FirstViewController.m */,
+				ACC06A5015BAEB08009A751D /* first.png */,
+				ACC06A5215BAEB08009A751D /* first@2x.png */,
+				ACC06A5415BAEB08009A751D /* SecondViewController.h */,
+				ACC06A5515BAEB08009A751D /* SecondViewController.m */,
+				ACC06A5715BAEB08009A751D /* second.png */,
+				ACC06A5915BAEB08009A751D /* second@2x.png */,
+				ACC06A3C15BAEB08009A751D /* Supporting Files */,
+			);
+			path = "fb-video";
+			sourceTree = "<group>";
+		};
+		ACC06A3C15BAEB08009A751D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ACC06A3D15BAEB08009A751D /* fb-video-Info.plist */,
+				ACC06A3E15BAEB08009A751D /* InfoPlist.strings */,
+				ACC06A4115BAEB08009A751D /* main.m */,
+				ACC06A4315BAEB08009A751D /* fb-video-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ACC06A6715BAEB08009A751D /* fb-videoTests */ = {
+			isa = PBXGroup;
+			children = (
+				ACC06A6D15BAEB09009A751D /* fb_videoTests.h */,
+				ACC06A6E15BAEB09009A751D /* fb_videoTests.m */,
+				ACC06A6815BAEB08009A751D /* Supporting Files */,
+			);
+			path = "fb-videoTests";
+			sourceTree = "<group>";
+		};
+		ACC06A6815BAEB08009A751D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ACC06A6915BAEB08009A751D /* fb-videoTests-Info.plist */,
+				ACC06A6A15BAEB08009A751D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ACC06A3015BAEB08009A751D /* fb-video */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACC06A7215BAEB09009A751D /* Build configuration list for PBXNativeTarget "fb-video" */;
+			buildPhases = (
+				ACC06A2D15BAEB08009A751D /* Sources */,
+				ACC06A2E15BAEB08009A751D /* Frameworks */,
+				ACC06A2F15BAEB08009A751D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "fb-video";
+			productName = "fb-video";
+			productReference = ACC06A3115BAEB08009A751D /* fb-video.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ACC06A5F15BAEB08009A751D /* fb-videoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACC06A7515BAEB09009A751D /* Build configuration list for PBXNativeTarget "fb-videoTests" */;
+			buildPhases = (
+				ACC06A5B15BAEB08009A751D /* Sources */,
+				ACC06A5C15BAEB08009A751D /* Frameworks */,
+				ACC06A5D15BAEB08009A751D /* Resources */,
+				ACC06A5E15BAEB08009A751D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACC06A6615BAEB08009A751D /* PBXTargetDependency */,
+			);
+			name = "fb-videoTests";
+			productName = "fb-videoTests";
+			productReference = ACC06A6015BAEB08009A751D /* fb-videoTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ACC06A2815BAEB07009A751D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Chevron Holdings Inc.";
+			};
+			buildConfigurationList = ACC06A2B15BAEB07009A751D /* Build configuration list for PBXProject "fb-video" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ACC06A2615BAEB07009A751D;
+			productRefGroup = ACC06A3215BAEB08009A751D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ACC06A3015BAEB08009A751D /* fb-video */,
+				ACC06A5F15BAEB08009A751D /* fb-videoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ACC06A2F15BAEB08009A751D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACC06A4015BAEB08009A751D /* InfoPlist.strings in Resources */,
+				ACC06A4915BAEB08009A751D /* MainStoryboard_iPhone.storyboard in Resources */,
+				ACC06A4C15BAEB08009A751D /* MainStoryboard_iPad.storyboard in Resources */,
+				ACC06A5115BAEB08009A751D /* first.png in Resources */,
+				ACC06A5315BAEB08009A751D /* first@2x.png in Resources */,
+				ACC06A5815BAEB08009A751D /* second.png in Resources */,
+				ACC06A5A15BAEB08009A751D /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACC06A5D15BAEB08009A751D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACC06A6C15BAEB08009A751D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ACC06A5E15BAEB08009A751D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ACC06A2D15BAEB08009A751D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACC06A4215BAEB08009A751D /* main.m in Sources */,
+				ACC06A4615BAEB08009A751D /* AppDelegate.m in Sources */,
+				ACC06A4F15BAEB08009A751D /* FirstViewController.m in Sources */,
+				ACC06A5615BAEB08009A751D /* SecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACC06A5B15BAEB08009A751D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACC06A6F15BAEB09009A751D /* fb_videoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ACC06A6615BAEB08009A751D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACC06A3015BAEB08009A751D /* fb-video */;
+			targetProxy = ACC06A6515BAEB08009A751D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ACC06A3E15BAEB08009A751D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACC06A3F15BAEB08009A751D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ACC06A4715BAEB08009A751D /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACC06A4815BAEB08009A751D /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		ACC06A4A15BAEB08009A751D /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACC06A4B15BAEB08009A751D /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		ACC06A6A15BAEB08009A751D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACC06A6B15BAEB08009A751D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ACC06A7015BAEB09009A751D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ACC06A7115BAEB09009A751D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ACC06A7315BAEB09009A751D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "fb-video/fb-video-Prefix.pch";
+				INFOPLIST_FILE = "fb-video/fb-video-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		ACC06A7415BAEB09009A751D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "fb-video/fb-video-Prefix.pch";
+				INFOPLIST_FILE = "fb-video/fb-video-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		ACC06A7615BAEB09009A751D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/fb-video.app/fb-video";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "fb-video/fb-video-Prefix.pch";
+				INFOPLIST_FILE = "fb-videoTests/fb-videoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		ACC06A7715BAEB09009A751D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/fb-video.app/fb-video";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "fb-video/fb-video-Prefix.pch";
+				INFOPLIST_FILE = "fb-videoTests/fb-videoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ACC06A2B15BAEB07009A751D /* Build configuration list for PBXProject "fb-video" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACC06A7015BAEB09009A751D /* Debug */,
+				ACC06A7115BAEB09009A751D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACC06A7215BAEB09009A751D /* Build configuration list for PBXNativeTarget "fb-video" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACC06A7315BAEB09009A751D /* Debug */,
+				ACC06A7415BAEB09009A751D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ACC06A7515BAEB09009A751D /* Build configuration list for PBXNativeTarget "fb-videoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACC06A7615BAEB09009A751D /* Debug */,
+				ACC06A7715BAEB09009A751D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ACC06A2815BAEB07009A751D /* Project object */;
+}
