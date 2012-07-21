@@ -43,27 +43,27 @@
 		ACC06A3515BAEB08009A751D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ACC06A3715BAEB08009A751D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ACC06A3915BAEB08009A751D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		ACC06A3D15BAEB08009A751D /* fb-video-Info.plist */ = {isa = PBXFileReference; path = "fb-video-Info.plist"; sourceTree = "<group>"; };
+		ACC06A3D15BAEB08009A751D /* fb-video-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "fb-video-Info.plist"; sourceTree = "<group>"; };
 		ACC06A3F15BAEB08009A751D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ACC06A4115BAEB08009A751D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		ACC06A4315BAEB08009A751D /* fb-video-Prefix.pch */ = {isa = PBXFileReference; path = "fb-video-Prefix.pch"; sourceTree = "<group>"; };
-		ACC06A4415BAEB08009A751D /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		ACC06A4315BAEB08009A751D /* fb-video-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fb-video-Prefix.pch"; sourceTree = "<group>"; };
+		ACC06A4415BAEB08009A751D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ACC06A4515BAEB08009A751D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		ACC06A4815BAEB08009A751D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		ACC06A4B15BAEB08009A751D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		ACC06A4D15BAEB08009A751D /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
+		ACC06A4D15BAEB08009A751D /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		ACC06A4E15BAEB08009A751D /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		ACC06A5015BAEB08009A751D /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		ACC06A5215BAEB08009A751D /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		ACC06A5415BAEB08009A751D /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
+		ACC06A5415BAEB08009A751D /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		ACC06A5515BAEB08009A751D /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		ACC06A5715BAEB08009A751D /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		ACC06A5915BAEB08009A751D /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		ACC06A6015BAEB08009A751D /* fb-videoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fb-videoTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC06A6115BAEB08009A751D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		ACC06A6915BAEB08009A751D /* fb-videoTests-Info.plist */ = {isa = PBXFileReference; path = "fb-videoTests-Info.plist"; sourceTree = "<group>"; };
+		ACC06A6915BAEB08009A751D /* fb-videoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "fb-videoTests-Info.plist"; sourceTree = "<group>"; };
 		ACC06A6B15BAEB08009A751D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		ACC06A6D15BAEB09009A751D /* fb_videoTests.h */ = {isa = PBXFileReference; path = fb_videoTests.h; sourceTree = "<group>"; };
+		ACC06A6D15BAEB09009A751D /* fb_videoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fb_videoTests.h; sourceTree = "<group>"; };
 		ACC06A6E15BAEB09009A751D /* fb_videoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fb_videoTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
