@@ -7,6 +7,7 @@
 //
 
 #import "DefaultViewController.h"
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface DefaultViewController ()
 - (IBAction)login:(id)sender;
@@ -44,5 +45,20 @@
 }
 
 - (IBAction)login:(id)sender {
+    [FBSession sessionOpenWithPermissions:nil completionHandler:^(FBSession *session, FBSessionState status, NSError *error) {
+        if (session.isOpen) {
+            FBRequest *me = [FBRequest requestForMe];
+            [me startWithCompletionHandler: ^(FBRequestConnection *connection,
+                                              NSDictionary<FBGraphUser> *my,
+                                              NSError *error) {
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Hello"
+                                                                    message:my.first_name
+                                                                   delegate:nil
+                                                          cancelButtonTitle:@"OK"
+                                                          otherButtonTitles:nil];
+                [alertView show];
+            }];
+        }
+    }];
 }
 @end
