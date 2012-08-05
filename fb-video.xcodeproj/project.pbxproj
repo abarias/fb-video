@@ -28,6 +28,7 @@
 		ACC06A6F15BAEB09009A751D /* fb_videoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC06A6E15BAEB09009A751D /* fb_videoTests.m */; };
 		ACFAFA3D15CD8E68006142B0 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACFAFA3C15CD8E68006142B0 /* FacebookSDK.framework */; };
 		ACFAFA4015CD8E9F006142B0 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ACFAFA3F15CD8E9F006142B0 /* FacebookSDKResources.bundle */; };
+		ACFAFA4415CE19E5006142B0 /* DefaultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFAFA4215CE19E4006142B0 /* DefaultViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		ACC06A6E15BAEB09009A751D /* fb_videoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fb_videoTests.m; sourceTree = "<group>"; };
 		ACFAFA3C15CD8E68006142B0 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		ACFAFA3F15CD8E9F006142B0 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = ../../FacebookSDK/FacebookSDK.framework/Versions/A/Resources/FacebookSDKResources.bundle; sourceTree = "<group>"; };
+		ACFAFA4115CE19E4006142B0 /* DefaultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultViewController.h; sourceTree = "<group>"; };
+		ACFAFA4215CE19E4006142B0 /* DefaultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +147,8 @@
 				ACC06A5715BAEB08009A751D /* second.png */,
 				ACC06A5915BAEB08009A751D /* second@2x.png */,
 				ACC06A3C15BAEB08009A751D /* Supporting Files */,
+				ACFAFA4115CE19E4006142B0 /* DefaultViewController.h */,
+				ACFAFA4215CE19E4006142B0 /* DefaultViewController.m */,
 			);
 			path = "fb-video";
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 				ACC06A4615BAEB08009A751D /* AppDelegate.m in Sources */,
 				ACC06A4F15BAEB08009A751D /* FirstViewController.m in Sources */,
 				ACC06A5615BAEB08009A751D /* SecondViewController.m in Sources */,
+				ACFAFA4415CE19E5006142B0 /* DefaultViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
