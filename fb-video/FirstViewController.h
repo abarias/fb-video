@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : FBFriendPickerViewController
 
 @end

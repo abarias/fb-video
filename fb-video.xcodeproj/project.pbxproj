@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B1C2CCC15E10DB200648891 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1C2CCB15E10DB200648891 /* AddressBook.framework */; };
 		ACC06A3615BAEB08009A751D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC06A3515BAEB08009A751D /* UIKit.framework */; };
 		ACC06A3815BAEB08009A751D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC06A3715BAEB08009A751D /* Foundation.framework */; };
 		ACC06A3A15BAEB08009A751D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC06A3915BAEB08009A751D /* CoreGraphics.framework */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B1C2CCB15E10DB200648891 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		ACC06A3115BAEB08009A751D /* fb-video.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fb-video.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC06A3515BAEB08009A751D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ACC06A3715BAEB08009A751D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -79,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B1C2CCC15E10DB200648891 /* AddressBook.framework in Frameworks */,
 				ACC06A3615BAEB08009A751D /* UIKit.framework in Frameworks */,
 				ACC06A3815BAEB08009A751D /* Foundation.framework in Frameworks */,
 				ACC06A3A15BAEB08009A751D /* CoreGraphics.framework in Frameworks */,
@@ -121,6 +124,7 @@
 		ACC06A3415BAEB08009A751D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8B1C2CCB15E10DB200648891 /* AddressBook.framework */,
 				ACFAFA3F15CD8E9F006142B0 /* FacebookSDKResources.bundle */,
 				ACFAFA3C15CD8E68006142B0 /* FacebookSDK.framework */,
 				ACC06A3515BAEB08009A751D /* UIKit.framework */,

@@ -20,7 +20,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    FBFriendPickerViewController *friendPicker = [[FBFriendPickerViewController alloc] init];
+    //FBFriendPickerViewController *friendPicker = [[FBFriendPickerViewController alloc] init];
     
     // Set up the friend picker to sort and display names the same way as the
     // iOS Address Book does.
@@ -30,18 +30,18 @@
     ABPersonSortOrdering sortOrdering = ABPersonGetSortOrdering();
     ABPersonCompositeNameFormat nameFormat = ABPersonGetCompositeNameFormat();
     
-    friendPicker.sortOrdering = (sortOrdering == kABPersonSortByFirstName) ? FBFriendSortByFirstName : FBFriendSortByLastName;
-    friendPicker.displayOrdering = (nameFormat == kABPersonCompositeNameFormatFirstNameFirst) ? FBFriendDisplayByFirstName : FBFriendDisplayByLastName;
+    self    .sortOrdering = (sortOrdering == kABPersonSortByFirstName) ? FBFriendSortByFirstName : FBFriendSortByLastName;
+    self.displayOrdering = (nameFormat == kABPersonCompositeNameFormatFirstNameFirst) ? FBFriendDisplayByFirstName : FBFriendDisplayByLastName;
     
-    [friendPicker loadData];
-    [friendPicker presentModallyFromViewController:self
-                                          animated:YES
-                                           handler:^(FBViewController *sender, BOOL donePressed) {
-                                               if (donePressed) {
-                                                   self.selectedFriends = friendPicker.selection;
-                                                   [self updateSelections];
-                                               }
-                                           }];
+    [self loadData];
+//    [self presentModallyFromViewController:self
+//                                          animated:YES
+//                                           handler:^(FBViewController *sender, BOOL donePressed) {
+//                                               if (donePressed) {
+//                                                   self.selectedFriends = friendPicker.selection;
+//                                                   [self updateSelections];
+//                                               }
+//                                           }];
 }
 
 - (void)viewDidUnload
