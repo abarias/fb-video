@@ -12,6 +12,8 @@
 
 @interface FirstViewController ()
 
+@property (retain, nonatomic) FBFriendPickerViewController *friendPickerController;
+
 @end
 
 @implementation FirstViewController
@@ -19,29 +21,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    //FBFriendPickerViewController *friendPicker = [[FBFriendPickerViewController alloc] init];
-    
-    // Set up the friend picker to sort and display names the same way as the
-    // iOS Address Book does.
-    
-    // Need to call ABAddressBookCreate in order for the next two calls to do anything.
-    ABAddressBookCreate();
-    ABPersonSortOrdering sortOrdering = ABPersonGetSortOrdering();
-    ABPersonCompositeNameFormat nameFormat = ABPersonGetCompositeNameFormat();
-    
-    self    .sortOrdering = (sortOrdering == kABPersonSortByFirstName) ? FBFriendSortByFirstName : FBFriendSortByLastName;
-    self.displayOrdering = (nameFormat == kABPersonCompositeNameFormatFirstNameFirst) ? FBFriendDisplayByFirstName : FBFriendDisplayByLastName;
-    
-    [self loadData];
-//    [self presentModallyFromViewController:self
-//                                          animated:YES
-//                                           handler:^(FBViewController *sender, BOOL donePressed) {
-//                                               if (donePressed) {
-//                                                   self.selectedFriends = friendPicker.selection;
-//                                                   [self updateSelections];
-//                                               }
-//                                           }];
 }
 
 - (void)viewDidUnload
@@ -59,4 +38,36 @@
     }
 }
 
+- (IBAction)showFBFriendPicker:(id)sender {
+    if (self.friendPickerController == nil) {
+        // Create friend picker, and get data loaded into it.
+        self.friendPickerController = [[FBFriendPickerViewController alloc] init];
+        self.friendPickerController.title = @"Pick Friends";
+        self.friendPickerController.delegate = self;
+    }
+    
+    [self.friendPickerController loadData];
+    [self.friendPickerController clearSelection];
+    
+    // iOS 5.0+ apps should use [UIViewController presentViewController:animated:completion:]
+    // rather than this deprecated method, but we want our samples to run on iOS 4.x as well.
+    [self presentModalViewController:self.friendPickerController animated:YES];
+}
+
+- (void)facebookViewControllerDoneWasPressed:(id)sender {
+    NSMutableString *text = [[NSMutableString alloc] init];
+    
+    // we pick up the users from the selection, and create a string that we use to update the text view
+    // at the bottom of the display; note that self.selection is a property inherited from our base class
+    for (id<FBGraphUser> user in self.friendPickerController.selection) {
+        if ([text length]) {
+            [text appendString:@", "];
+        }
+        [text appendString:user.name];
+    }
+}
+
+- (void)facebookViewControllerCancelWasPressed:(id)sender {
+    [self dismissModalViewControllerAnimated:YES];
+}
 @end
