@@ -8,14 +8,102 @@
 
 #import "AppDelegate.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "FirstViewController.h"
+#import "DefaultViewController.h"
+
+NSString *const AYSessionStateChangedNotification = @"com.aybee.fb-video:AYSessionStateChangedNotification";
+
+@interface AppDelegate ()
+
+- (void)showLoginView;
+
+@end
+
 
 @implementation AppDelegate
 
 @synthesize window = _window;
 
+
+
+#pragma mark -
+#pragma mark Facebook Login Code
+
+- (void)showLoginView {
+    // FBSample logic
+    // If the login screen is not already displayed, display it. If the login screen is displayed, then
+    // getting back here means the login in progress did not successfully complete. In that case,
+    // notify the login view so it can update its UI appropriately.
+    
+    UITabBarController *tabBarController = (UITabBarController*)self.window.rootViewController;
+    [tabBarController performSegueWithIdentifier:@"facebookLogin" sender:self];
+}
+
+- (void)sessionStateChanged:(FBSession *)session
+                      state:(FBSessionState)state
+                      error:(NSError *)error
+{
+    // FBSample logic
+    // Any time the session is closed, we want to display the login controller (the user
+    // cannot use the application unless they are logged in to Facebook). When the session
+    // is opened successfully, hide the login controller and show the main UI.
+    switch (state) {
+        case FBSessionStateOpen: {
+            UITabBarController *tabBarController = (UITabBarController*)self.window.rootViewController;
+            if ([[tabBarController modalViewController] isKindOfClass:[DefaultViewController class]]) {
+                [tabBarController dismissModalViewControllerAnimated:YES];
+            }
+            
+            // FBSample logic
+            // Pre-fetch and cache the friends for the friend picker as soon as possible to improve
+            // responsiveness when the user tags their friends.
+            FBCacheDescriptor *cacheDescriptor = [FBFriendPickerViewController cacheDescriptor];
+            [cacheDescriptor prefetchAndCacheForSession:session];
+        }
+            break;
+        case FBSessionStateClosed:
+        case FBSessionStateClosedLoginFailed:
+            [FBSession.activeSession closeAndClearTokenInformation];
+            
+            [self showLoginView];
+            break;
+        default:
+            break;
+    }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:AYSessionStateChangedNotification
+                                                        object:session];
+    
+    if (error) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                            message:error.localizedDescription
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+    }
+}
+
+- (BOOL)openSessionWithAllowLoginUI:(BOOL)allowLoginUI {
+    NSArray *permissions = [NSArray arrayWithObjects:@"publish_actions", @"user_photos", nil];
+    return [FBSession openActiveSessionWithPermissions:permissions
+                                          allowLoginUI:allowLoginUI
+                                     completionHandler:^(FBSession *session, FBSessionState state, NSError *error) {
+                                         [self sessionStateChanged:session state:state error:error];
+                                     }];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [self.window makeKeyAndVisible];
+    
+    // FBSample logic
+    // See if we have a valid token for the current state.
+    if (![self openSessionWithAllowLoginUI:NO]) {
+        // No? Display the login page.
+        [self showLoginView];
+    }
     return YES;
 }
 							

@@ -8,6 +8,7 @@
 
 #import "DefaultViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "AppDelegate.h"
 
 @interface DefaultViewController ()
 - (IBAction)login:(id)sender;
@@ -45,20 +46,9 @@
 }
 
 - (IBAction)login:(id)sender {
-    [FBSession sessionOpenWithPermissions:nil completionHandler:^(FBSession *session, FBSessionState status, NSError *error) {
-        if (session.isOpen) {
-            FBRequest *me = [FBRequest requestForMe];
-            [me startWithCompletionHandler: ^(FBRequestConnection *connection,
-                                              NSDictionary<FBGraphUser> *my,
-                                              NSError *error) {
-                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Hello"
-                                                                    message:my.first_name
-                                                                   delegate:nil
-                                                          cancelButtonTitle:@"OK"
-                                                          otherButtonTitles:nil];
-                [alertView show];
-            }];
-        }
-    }];
+    // FBSample logic
+    // The user has initiated a login, so call the openSession method.
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    [appDelegate openSessionWithAllowLoginUI:YES];
 }
 @end

@@ -28,6 +28,21 @@
                                 <fontDescription key="fontDescription" type="system" size="system"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YM9-W0-i30">
+                                <rect key="frame" x="124" y="255" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="b0n-3y-w1H" kind="modal" id="FQb-Vy-Yr9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -67,11 +82,11 @@
             </objects>
             <point key="canvasLocation" x="653" y="498"/>
         </scene>
-        <!--Default View Controller-->
+        <!--Default View Controller - Login-->
         <scene sceneID="w0d-KJ-3ip">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSf-Sg-L7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="b0n-3y-w1H" customClass="DefaultViewController" sceneMemberID="viewController">
+                <viewController title="Login" id="b0n-3y-w1H" customClass="DefaultViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CZ9-Ck-3xd">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -101,11 +116,11 @@
             </objects>
             <point key="canvasLocation" x="209" y="-202"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar Controller - Root-->
         <scene sceneID="15">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
-                <tabBarController id="4" sceneMemberID="viewController">
+                <tabBarController title="Root" id="4" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="AeH-cz-6Eg"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="5">
@@ -116,7 +131,7 @@
                     <connections>
                         <segue destination="2" kind="relationship" relationship="viewControllers" id="26"/>
                         <segue destination="3" kind="relationship" relationship="viewControllers" id="27"/>
-                        <segue destination="b0n-3y-w1H" kind="modal" id="ngl-J2-bPw"/>
+                        <segue destination="b0n-3y-w1H" kind="modal" identifier="facebookLogin" id="ngl-J2-bPw"/>
                     </connections>
                 </tabBarController>
             </objects>
@@ -147,4 +162,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="FQb-Vy-Yr9"/>
+    </inferredMetricsTieBreakers>
 </document>
