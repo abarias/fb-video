@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8B1C2CCC15E10DB200648891 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1C2CCB15E10DB200648891 /* AddressBook.framework */; };
+		AC5E904B15E3D6500079F65A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC5E904915E3D6500079F65A /* Model.xcdatamodeld */; };
+		AC5E905315E3F4E10079F65A /* FavoriteFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5E905215E3F4E10079F65A /* FavoriteFriends.m */; };
+		AC5E905915E4D5850079F65A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5E905815E4D5850079F65A /* CoreData.framework */; };
 		ACC06A3615BAEB08009A751D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC06A3515BAEB08009A751D /* UIKit.framework */; };
 		ACC06A3815BAEB08009A751D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC06A3715BAEB08009A751D /* Foundation.framework */; };
 		ACC06A3A15BAEB08009A751D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC06A3915BAEB08009A751D /* CoreGraphics.framework */; };
@@ -44,6 +47,10 @@
 
 /* Begin PBXFileReference section */
 		8B1C2CCB15E10DB200648891 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		AC5E904A15E3D6500079F65A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		AC5E905115E3F4E10079F65A /* FavoriteFriends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavoriteFriends.h; path = "fb-video/FavoriteFriends.h"; sourceTree = "<group>"; };
+		AC5E905215E3F4E10079F65A /* FavoriteFriends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavoriteFriends.m; path = "fb-video/FavoriteFriends.m"; sourceTree = "<group>"; };
+		AC5E905815E4D5850079F65A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		ACC06A3115BAEB08009A751D /* fb-video.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fb-video.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC06A3515BAEB08009A751D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ACC06A3715BAEB08009A751D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -81,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC5E905915E4D5850079F65A /* CoreData.framework in Frameworks */,
 				8B1C2CCC15E10DB200648891 /* AddressBook.framework in Frameworks */,
 				ACC06A3615BAEB08009A751D /* UIKit.framework in Frameworks */,
 				ACC06A3815BAEB08009A751D /* Foundation.framework in Frameworks */,
@@ -105,6 +113,9 @@
 		ACC06A2615BAEB07009A751D = {
 			isa = PBXGroup;
 			children = (
+				AC5E904915E3D6500079F65A /* Model.xcdatamodeld */,
+				AC5E905115E3F4E10079F65A /* FavoriteFriends.h */,
+				AC5E905215E3F4E10079F65A /* FavoriteFriends.m */,
 				ACC06A3B15BAEB08009A751D /* fb-video */,
 				ACC06A6715BAEB08009A751D /* fb-videoTests */,
 				ACC06A3415BAEB08009A751D /* Frameworks */,
@@ -124,6 +135,7 @@
 		ACC06A3415BAEB08009A751D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AC5E905815E4D5850079F65A /* CoreData.framework */,
 				8B1C2CCB15E10DB200648891 /* AddressBook.framework */,
 				ACFAFA3F15CD8E9F006142B0 /* FacebookSDKResources.bundle */,
 				ACFAFA3C15CD8E68006142B0 /* FacebookSDK.framework */,
@@ -305,6 +317,8 @@
 				ACC06A4F15BAEB08009A751D /* FirstViewController.m in Sources */,
 				ACC06A5615BAEB08009A751D /* SecondViewController.m in Sources */,
 				ACFAFA4415CE19E5006142B0 /* DefaultViewController.m in Sources */,
+				AC5E904B15E3D6500079F65A /* Model.xcdatamodeld in Sources */,
+				AC5E905315E3F4E10079F65A /* FavoriteFriends.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +520,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AC5E904915E3D6500079F65A /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AC5E904A15E3D6500079F65A /* Model.xcdatamodel */,
+			);
+			currentVersion = AC5E904A15E3D6500079F65A /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = ACC06A2815BAEB07009A751D /* Project object */;
 }

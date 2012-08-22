@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
 
-@interface FirstViewController : UIViewController<FBFriendPickerDelegate>
+@interface FirstViewController : UITableViewController<FBFriendPickerDelegate, NSFetchedResultsControllerDelegate>
 - (IBAction)showFBFriendPicker:(id)sender;
 
 @end
