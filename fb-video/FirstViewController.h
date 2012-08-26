@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
 
-@interface FirstViewController : UITableViewController<FBFriendPickerDelegate, NSFetchedResultsControllerDelegate>
+@interface FirstViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, FBFriendPickerDelegate, NSFetchedResultsControllerDelegate>
 - (IBAction)showFBFriendPicker:(id)sender;
+@property (strong, nonatomic) IBOutlet UITableView *myTableView;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (retain, nonatomic) FBFriendPickerViewController *friendPickerController;
 
 @end

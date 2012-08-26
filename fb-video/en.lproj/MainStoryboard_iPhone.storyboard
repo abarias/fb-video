@@ -25,13 +25,36 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="laE-qM-O6P">
+                                <rect key="frame" x="0.0" y="44" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" id="Rck-Pc-O0T">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="tW8-f7-vbR"/>
+                                    <outlet property="delegate" destination="2" id="EH7-JT-Jp1"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="7"/>
+                    <connections>
+                        <outlet property="myTableView" destination="laE-qM-O6P" id="cul-Bv-dVv"/>
+                    </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="653" y="-140"/>
+            <point key="canvasLocation" x="595" y="-132"/>
         </scene>
         <!--Second View Controller - Second-->
         <scene sceneID="13">
@@ -96,7 +119,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="209" y="-202"/>
+            <point key="canvasLocation" x="-139" y="-246"/>
         </scene>
         <!--Tab Bar Controller - Root-->
         <scene sceneID="15">
@@ -132,10 +155,11 @@
                 <relationship kind="outlet" name="login" candidateClass="UIButton"/>
             </relationships>
         </class>
-        <class className="FirstViewController" superclassName="UITableViewController">
+        <class className="FirstViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewController.h"/>
             <relationships>
                 <relationship kind="action" name="showFBFriendPicker:"/>
+                <relationship kind="outlet" name="myTableView" candidateClass="UITableView"/>
             </relationships>
         </class>
         <class className="SecondViewController" superclassName="UIViewController">

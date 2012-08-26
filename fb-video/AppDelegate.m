@@ -15,10 +15,6 @@ NSString *const AYSessionStateChangedNotification = @"com.aybee.fb-video:AYSessi
 
 @interface AppDelegate ()
 
-@property (nonatomic, strong, readonly) NSManagedObjectModel *managedObjectModel;
-@property (nonatomic, strong, readonly) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, strong, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-
 - (NSURL *)applicationDocumentsDirectory;
 - (void)showLoginView;
 
@@ -101,6 +97,8 @@ NSString *const AYSessionStateChangedNotification = @"com.aybee.fb-video:AYSessi
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+//    FirstViewController *firstViewController = (FirstViewController*)self.window.rootViewController.tabBarController.selectedViewController;
+//    firstViewController.managedObjectContext = self.managedObjectContext;
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
     
