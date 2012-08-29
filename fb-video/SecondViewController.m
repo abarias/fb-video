@@ -8,14 +8,17 @@
 
 #import "SecondViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "AsyncImageView.h"
 
-#define kCustomRowsPerPage     50
+#define kCustomRowsPerPage     25
 
 @interface SecondViewController ()
 
 @property (strong, nonatomic) FBRequestConnection *requestConnection;
 @property (nonatomic, retain) NSMutableArray *facebookAlbums;
 @property int pageOffset;
+@property int pageLimit;
+@property int pageCounter;
 
 @end
 
@@ -25,6 +28,8 @@
 @synthesize myTableView = _myTableView;
 @synthesize facebookAlbums = _facebookAlbums;
 @synthesize pageOffset = _pageOffset;
+@synthesize pageLimit = _pageLimit;
+@synthesize pageCounter = _pageCounter;
 
 - (void)sendRequests {
     // extract the id's for which we will request the profile
@@ -32,16 +37,20 @@
     // create the connection object
     FBRequestConnection *newConnection = [[FBRequestConnection alloc] init];
     
-
-        
-        // create a handler block to handle the results of the request for fbid's profile
-        FBRequestHandler handler =
-        ^(FBRequestConnection *connection, id result, NSError *error) {
-            // output the results of the request
-            [self requestCompleted:connection result:result error:error];
-        };
+    // create a handler block to handle the results of the request for fbid's profile
+    FBRequestHandler handler =
+    ^(FBRequestConnection *connection, id result, NSError *error) {
+        // output the results of the request
+        [self requestCompleted:connection result:result error:error];
+    };
     
-    NSString *pageQuery = [NSString stringWithFormat:@"me/albums?limit=%d&offset=%d",kCustomRowsPerPage,self.pageOffset,nil];
+    int limit = self.pageCounter * kCustomRowsPerPage;
+    int offset = 0;
+    if (self.pageCounter > 1) {
+        offset = limit - kCustomRowsPerPage + 1;
+    }
+    
+    NSString *pageQuery = [NSString stringWithFormat:@"me/albums?limit=%d&offset=%d",kCustomRowsPerPage,offset,nil];
         
         // create the request object, using the fbid as the graph path
         // as an alternative the request* static methods of the FBRequest class could
@@ -85,9 +94,15 @@
         NSDictionary *dictionary = (NSDictionary *)result;
         // we pull the name property out, if there is one, and display it
         //[self.facebookAlbums addObjectsFromArray:(NSArray*)[dictionary objectForKey:@"data"]];
-        self.facebookAlbums = [dictionary objectForKey:@"data"];
+        if (self.facebookAlbums.count == 0) {
+            self.facebookAlbums = [dictionary objectForKey:@"data"];
+        } else {
+            [self.facebookAlbums addObjectsFromArray:(NSArray*)[dictionary objectForKey:@"data"]];
+        }
+        NSLog(@"JSON response: %@",[dictionary objectForKey:@"data"]);
     }
     [self.myTableView reloadData];
+    NSLog(@"page counter: %d", self.pageCounter);
     //NSLog(@"%@",text);
 }
 
@@ -95,7 +110,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.pageOffset = 26;
+    self.pageCounter = 1;
 	// Do any additional setup after loading the view, typically from a nib.
     [self sendRequests];
 }
@@ -130,6 +145,7 @@
     // Configure the cell to show the book's title
     NSDictionary *fbAlbum = [self.facebookAlbums objectAtIndex:[indexPath row]];
     cell.textLabel.text = (NSString *)[fbAlbum objectForKey:@"name"];
+    cell.detailTextLabel.text = (NSString *)[fbAlbum objectForKey:@"location"];
 }
 
 
@@ -157,6 +173,15 @@
     }
     
     return cell;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == self.facebookAlbums.count) {
+        self.pageCounter++;
+        [self sendRequests];
+    }
+ 
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
