@@ -12,12 +12,16 @@
 @interface SecondViewController ()
 
 @property (strong, nonatomic) FBRequestConnection *requestConnection;
+@property (nonatomic, retain) NSMutableArray *facebookAlbums;
+
 
 @end
 
 @implementation SecondViewController
 
 @synthesize requestConnection = _requestConnection;
+@synthesize myTableView = _myTableView;
+@synthesize facebookAlbums = _facebookAlbums;
 
 - (void)sendRequests {
     // extract the id's for which we will request the profile
@@ -38,7 +42,7 @@
         // as an alternative the request* static methods of the FBRequest class could
         // be used to fetch common requests, such as /me and /me/friends
         FBRequest *request = [[FBRequest alloc] initWithSession:FBSession.activeSession
-                                                      graphPath:@"me/albums"];
+                                                      graphPath:@"me/albums?limit=200"];
         
         // add the request to the connection object, if more than one request is added
         // the connection object will compose the requests as a batch request; whether or
@@ -70,17 +74,15 @@
     // clean this up, for posterity
     self.requestConnection = nil;
     
-    NSString *text;
-    if (error) {
-        // error contains details about why the request failed
-        text = error.localizedDescription;
-    } else {
+    //NSString *text;
+    if (!error) {
         // result is the json response from a successful request
         NSDictionary *dictionary = (NSDictionary *)result;
         // we pull the name property out, if there is one, and display it
-        text = (NSString *)[dictionary objectForKey:@"data"];
+        self.facebookAlbums = [dictionary objectForKey:@"data"];
     }
-    NSLog(@"%@",text);
+    [self.myTableView reloadData];
+    //NSLog(@"%@",text);
 }
 
 
@@ -95,6 +97,42 @@
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+
+#pragma mark -
+#pragma mark Table view data source methods
+
+/*
+ The data source methods are handled primarily by the fetch results controller
+ */
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+// Customize the number of rows in the table view.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.facebookAlbums count];
+}
+
+// Customize the appearance of table view cells.
+
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+{
+    // Configure the cell to show the book's title
+    NSDictionary *fbAlbum = [self.facebookAlbums objectAtIndex:[indexPath row]];
+    cell.textLabel.text = (NSString *)[fbAlbum objectForKey:@"name"];
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    [self configureCell:cell atIndexPath:indexPath];
+    
+    return cell;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
