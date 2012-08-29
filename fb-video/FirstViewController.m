@@ -146,6 +146,7 @@
 - (void)facebookViewControllerDoneWasPressed:(id)sender {
     // we pick up the users from the selection, and create a string that we use to update the text view
     // at the bottom of the display; note that self.selection is a property inherited from our base class
+    NSInteger *counter = 0;
     for (id<FBGraphUser> user in self.friendPickerController.selection) {
         
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
@@ -157,6 +158,7 @@
         NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
         
         if (results.count == 0) {
+            counter++;
             FavoriteFriends *favoriteFriends = [NSEntityDescription insertNewObjectForEntityForName:@"FavoriteFriends" inManagedObjectContext:self.managedObjectContext];
             favoriteFriends.id = user.id;
             favoriteFriends.name = user.name;
@@ -164,13 +166,13 @@
             favoriteFriends.last_name = user.last_name;
         }
     }
-    if (self.friendPickerController.selection.count > 0) {
+    if (counter > 0 && self.friendPickerController.selection.count > 0) {
         NSError *error;
         if (![self.managedObjectContext save:&error]) {
             NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
         }
     }
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 //    [self.myTableView reloadData];
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable) name:@"reloadTable" object:nil];
 }
