@@ -9,11 +9,13 @@
 #import "SecondViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 
+#define kCustomRowsPerPage     50
+
 @interface SecondViewController ()
 
 @property (strong, nonatomic) FBRequestConnection *requestConnection;
 @property (nonatomic, retain) NSMutableArray *facebookAlbums;
-
+@property int pageOffset;
 
 @end
 
@@ -22,6 +24,7 @@
 @synthesize requestConnection = _requestConnection;
 @synthesize myTableView = _myTableView;
 @synthesize facebookAlbums = _facebookAlbums;
+@synthesize pageOffset = _pageOffset;
 
 - (void)sendRequests {
     // extract the id's for which we will request the profile
@@ -37,12 +40,14 @@
             // output the results of the request
             [self requestCompleted:connection result:result error:error];
         };
+    
+    NSString *pageQuery = [NSString stringWithFormat:@"me/albums?limit=%d&offset=%d",kCustomRowsPerPage,self.pageOffset,nil];
         
         // create the request object, using the fbid as the graph path
         // as an alternative the request* static methods of the FBRequest class could
         // be used to fetch common requests, such as /me and /me/friends
         FBRequest *request = [[FBRequest alloc] initWithSession:FBSession.activeSession
-                                                      graphPath:@"me/albums?limit=200"];
+                                                      graphPath:pageQuery];
         
         // add the request to the connection object, if more than one request is added
         // the connection object will compose the requests as a batch request; whether or
@@ -79,6 +84,7 @@
         // result is the json response from a successful request
         NSDictionary *dictionary = (NSDictionary *)result;
         // we pull the name property out, if there is one, and display it
+        //[self.facebookAlbums addObjectsFromArray:(NSArray*)[dictionary objectForKey:@"data"]];
         self.facebookAlbums = [dictionary objectForKey:@"data"];
     }
     [self.myTableView reloadData];
@@ -89,6 +95,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.pageOffset = 26;
 	// Do any additional setup after loading the view, typically from a nib.
     [self sendRequests];
 }
@@ -113,7 +120,7 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.facebookAlbums count];
+    return [self.facebookAlbums count] + 1;
 }
 
 // Customize the appearance of table view cells.
@@ -129,8 +136,25 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    [self configureCell:cell atIndexPath:indexPath];
+    static NSString *MoreCellIdentifier = @"MoreCell";
+    UITableViewCell *cell = nil;
+    
+    NSUInteger row = [indexPath row];
+    NSUInteger count = [self.facebookAlbums count];
+    
+    if (row == count) {
+        
+        cell = [tableView dequeueReusableCellWithIdentifier:MoreCellIdentifier];
+        
+        cell.textLabel.text = @"Load more items...";
+        cell.textLabel.textColor = [UIColor blueColor];
+        cell.textLabel.font = [UIFont boldSystemFontOfSize:14];
+        
+    } else {
+        
+        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        [self configureCell:cell atIndexPath:indexPath];
+    }
     
     return cell;
 }
