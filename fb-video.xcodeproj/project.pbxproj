@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8B1C2CCC15E10DB200648891 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1C2CCB15E10DB200648891 /* AddressBook.framework */; };
 		AC30E7E615EE830D00CB38AC /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC30E7E515EE830D00CB38AC /* AsyncImageView.m */; };
+		AC30E7EA15EFCCA100CB38AC /* FacebookAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = AC30E7E915EFCCA100CB38AC /* FacebookAlbum.m */; };
 		AC5E904B15E3D6500079F65A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC5E904915E3D6500079F65A /* Model.xcdatamodeld */; };
 		AC5E905315E3F4E10079F65A /* FavoriteFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5E905215E3F4E10079F65A /* FavoriteFriends.m */; };
 		AC5E905915E4D5850079F65A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5E905815E4D5850079F65A /* CoreData.framework */; };
@@ -50,6 +51,8 @@
 		8B1C2CCB15E10DB200648891 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		AC30E7E415EE830C00CB38AC /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
 		AC30E7E515EE830D00CB38AC /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
+		AC30E7E815EFCCA100CB38AC /* FacebookAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FacebookAlbum.h; path = "fb-video/FacebookAlbum.h"; sourceTree = "<group>"; };
+		AC30E7E915EFCCA100CB38AC /* FacebookAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FacebookAlbum.m; path = "fb-video/FacebookAlbum.m"; sourceTree = "<group>"; };
 		AC5E904A15E3D6500079F65A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		AC5E905115E3F4E10079F65A /* FavoriteFriends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavoriteFriends.h; path = "fb-video/FavoriteFriends.h"; sourceTree = "<group>"; };
 		AC5E905215E3F4E10079F65A /* FavoriteFriends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavoriteFriends.m; path = "fb-video/FavoriteFriends.m"; sourceTree = "<group>"; };
@@ -116,6 +119,8 @@
 		ACC06A2615BAEB07009A751D = {
 			isa = PBXGroup;
 			children = (
+				AC30E7E815EFCCA100CB38AC /* FacebookAlbum.h */,
+				AC30E7E915EFCCA100CB38AC /* FacebookAlbum.m */,
 				AC5E904915E3D6500079F65A /* Model.xcdatamodeld */,
 				AC5E905115E3F4E10079F65A /* FavoriteFriends.h */,
 				AC5E905215E3F4E10079F65A /* FavoriteFriends.m */,
@@ -325,6 +330,7 @@
 				AC5E904B15E3D6500079F65A /* Model.xcdatamodeld in Sources */,
 				AC5E905315E3F4E10079F65A /* FavoriteFriends.m in Sources */,
 				AC30E7E615EE830D00CB38AC /* AsyncImageView.m in Sources */,
+				AC30E7EA15EFCCA100CB38AC /* FacebookAlbum.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

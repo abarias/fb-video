@@ -9,13 +9,14 @@
 #import "SecondViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "AsyncImageView.h"
+#import "FacebookAlbum.h"
 
 #define kCustomRowsPerPage     25
 
 @interface SecondViewController ()
 
 @property (strong, nonatomic) FBRequestConnection *requestConnection;
-@property (nonatomic, retain) NSMutableArray *facebookAlbums;
+@property (nonatomic, strong) NSMutableArray *facebookAlbums;
 @property int pageOffset;
 @property int pageLimit;
 @property int pageCounter;
@@ -91,15 +92,37 @@
     //NSString *text;
     if (!error) {
         // result is the json response from a successful request
-        NSDictionary *dictionary = (NSDictionary *)result;
-        // we pull the name property out, if there is one, and display it
-        //[self.facebookAlbums addObjectsFromArray:(NSArray*)[dictionary objectForKey:@"data"]];
         if (self.facebookAlbums.count == 0) {
-            self.facebookAlbums = [dictionary objectForKey:@"data"];
-        } else {
-            [self.facebookAlbums addObjectsFromArray:(NSArray*)[dictionary objectForKey:@"data"]];
+            self.facebookAlbums = [NSMutableArray array];
         }
+        NSDictionary *dictionary = (NSDictionary *)result;
         NSLog(@"JSON response: %@",[dictionary objectForKey:@"data"]);
+        for (NSDictionary *album in [dictionary objectForKey:@"data"]) {
+            FacebookAlbum *facebookAlbum = [[FacebookAlbum alloc] init];
+            facebookAlbum.name = (NSString *)[album objectForKey:@"name"];
+            facebookAlbum.description = (NSString *)[album objectForKey:@"description"];
+            facebookAlbum.albumId = (NSString *)[album objectForKey:@"id"];
+            
+            //request for image URL;
+            NSString *coverPhotoId = (NSString *)[album objectForKey:@"cover_photo"];
+            if (FBSession.activeSession.isOpen) {
+                [[FBRequest requestForGraphPath:coverPhotoId] startWithCompletionHandler:
+                 ^(FBRequestConnection *connection, id response, NSError *error) {
+                     if (!error) {
+                         facebookAlbum.coverImageUrl = (NSString *)[response objectForKey:@"picture"];
+                     }
+                 }];   
+            }
+            [self.facebookAlbums addObject:facebookAlbum];
+        }
+        
+        
+//        if (self.facebookAlbums.count == 0) {
+//            self.facebookAlbums = [dictionary objectForKey:@"data"];
+//        } else {
+//            [self.facebookAlbums addObjectsFromArray:(NSArray*)[dictionary objectForKey:@"data"]];
+//        }
+//        NSLog(@"JSON response: %@",[dictionary objectForKey:@"data"]);
     }
     [self.myTableView reloadData];
     NSLog(@"page counter: %d", self.pageCounter);
@@ -143,9 +166,12 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     // Configure the cell to show the book's title
-    NSDictionary *fbAlbum = [self.facebookAlbums objectAtIndex:[indexPath row]];
-    cell.textLabel.text = (NSString *)[fbAlbum objectForKey:@"name"];
-    cell.detailTextLabel.text = (NSString *)[fbAlbum objectForKey:@"location"];
+//    NSDictionary *fbAlbum = [self.facebookAlbums objectAtIndex:[indexPath row]];
+//    cell.textLabel.text = (NSString *)[fbAlbum objectForKey:@"name"];
+//    cell.detailTextLabel.text = (NSString *)[fbAlbum objectForKey:@"location"];
+    FacebookAlbum *album = (FacebookAlbum*)[self.facebookAlbums objectAtIndex:[indexPath row]];
+    cell.textLabel.text = album.name;
+    cell.detailTextLabel.text = album.coverImageUrl;
 }
 
 
