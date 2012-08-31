@@ -11,7 +11,7 @@
 #import "AsyncImageView.h"
 #import "FacebookAlbum.h"
 
-#define kCustomRowsPerPage     25
+#define kCustomRowsPerPage     100
 
 @interface SecondViewController ()
 
@@ -157,7 +157,8 @@
 //    cell.detailTextLabel.text = (NSString *)[fbAlbum objectForKey:@"location"];
     FacebookAlbum *album = (FacebookAlbum*)[self.facebookAlbums objectAtIndex:[indexPath row]];
     cell.textLabel.text = album.name;
-    cell.detailTextLabel.text = album.coverImageUrl;
+    cell.detailTextLabel.text = album.description;
+    cell.imageView.image = [UIImage imageNamed:@"Placeholder.png"];
     cell.imageView.imageURL = [NSURL URLWithString:album.coverImageUrl];
 }
 
@@ -182,6 +183,10 @@
     } else {
         
         cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.imageView.contentMode = UIViewContentModeScaleAspectFill;
+        cell.imageView.frame = CGRectMake(0.0f, 0.0f, 44.0f, 44.0f);
+        cell.imageView.clipsToBounds = YES;
         [self configureCell:cell atIndexPath:indexPath];
     }
     
