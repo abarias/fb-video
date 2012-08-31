@@ -102,27 +102,13 @@
             facebookAlbum.name = (NSString *)[album objectForKey:@"name"];
             facebookAlbum.description = (NSString *)[album objectForKey:@"description"];
             facebookAlbum.albumId = (NSString *)[album objectForKey:@"id"];
-            
+                        
             //request for image URL;
             NSString *coverPhotoId = (NSString *)[album objectForKey:@"cover_photo"];
-            if (FBSession.activeSession.isOpen) {
-                [[FBRequest requestForGraphPath:coverPhotoId] startWithCompletionHandler:
-                 ^(FBRequestConnection *connection, id response, NSError *error) {
-                     if (!error) {
-                         facebookAlbum.coverImageUrl = (NSString *)[response objectForKey:@"picture"];
-                     }
-                 }];   
-            }
+            facebookAlbum.coverImageUrl = [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=album&access_token=%@",coverPhotoId,FBSession.activeSession.accessToken,nil];
+
             [self.facebookAlbums addObject:facebookAlbum];
         }
-        
-        
-//        if (self.facebookAlbums.count == 0) {
-//            self.facebookAlbums = [dictionary objectForKey:@"data"];
-//        } else {
-//            [self.facebookAlbums addObjectsFromArray:(NSArray*)[dictionary objectForKey:@"data"]];
-//        }
-//        NSLog(@"JSON response: %@",[dictionary objectForKey:@"data"]);
     }
     [self.myTableView reloadData];
     NSLog(@"page counter: %d", self.pageCounter);
@@ -172,6 +158,7 @@
     FacebookAlbum *album = (FacebookAlbum*)[self.facebookAlbums objectAtIndex:[indexPath row]];
     cell.textLabel.text = album.name;
     cell.detailTextLabel.text = album.coverImageUrl;
+    cell.imageView.imageURL = [NSURL URLWithString:album.coverImageUrl];
 }
 
 
