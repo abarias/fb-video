@@ -11,9 +11,21 @@
 		AC30E7E615EE830D00CB38AC /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC30E7E515EE830D00CB38AC /* AsyncImageView.m */; };
 		AC30E7EA15EFCCA100CB38AC /* FacebookAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = AC30E7E915EFCCA100CB38AC /* FacebookAlbum.m */; };
 		AC30E7EF15F1240A00CB38AC /* Placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = AC30E7EE15F1240A00CB38AC /* Placeholder.png */; };
+		AC30E8F715F27CF900CB38AC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC30E8F615F27CF900CB38AC /* QuartzCore.framework */; };
+		AC30E94915F376F100CB38AC /* PhotoAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC30E94815F376F000CB38AC /* PhotoAlbumViewController.m */; };
+		AC30E94C15F39E6400CB38AC /* FacebookPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = AC30E94B15F39E6400CB38AC /* FacebookPhoto.m */; };
+		AC30E94F15F3ABC800CB38AC /* FacebookPhotoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AC30E94E15F3ABC700CB38AC /* FacebookPhotoSource.m */; };
+		AC44CBFA15F3D4A80034EAAA /* Three20.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AC44CBF915F3D4A80034EAAA /* Three20.bundle */; };
 		AC5E904B15E3D6500079F65A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC5E904915E3D6500079F65A /* Model.xcdatamodeld */; };
 		AC5E905315E3F4E10079F65A /* FavoriteFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5E905215E3F4E10079F65A /* FavoriteFriends.m */; };
 		AC5E905915E4D5850079F65A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5E905815E4D5850079F65A /* CoreData.framework */; };
+		AC875EFB15F4A5EC00735533 /* libThree20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC875EF415F4A5EC00735533 /* libThree20.a */; };
+		AC875EFC15F4A5EC00735533 /* libThree20Core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC875EF515F4A5EC00735533 /* libThree20Core.a */; };
+		AC875EFD15F4A5EC00735533 /* libThree20Network.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC875EF615F4A5EC00735533 /* libThree20Network.a */; };
+		AC875EFE15F4A5EC00735533 /* libThree20Style.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC875EF715F4A5EC00735533 /* libThree20Style.a */; };
+		AC875EFF15F4A5EC00735533 /* libThree20UI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC875EF815F4A5EC00735533 /* libThree20UI.a */; };
+		AC875F0015F4A5EC00735533 /* libThree20UICommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC875EF915F4A5EC00735533 /* libThree20UICommon.a */; };
+		AC875F0115F4A5EC00735533 /* libThree20UINavigator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC875EFA15F4A5EC00735533 /* libThree20UINavigator.a */; };
 		ACC06A3615BAEB08009A751D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC06A3515BAEB08009A751D /* UIKit.framework */; };
 		ACC06A3815BAEB08009A751D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC06A3715BAEB08009A751D /* Foundation.framework */; };
 		ACC06A3A15BAEB08009A751D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC06A3915BAEB08009A751D /* CoreGraphics.framework */; };
@@ -55,10 +67,25 @@
 		AC30E7E815EFCCA100CB38AC /* FacebookAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FacebookAlbum.h; path = "fb-video/FacebookAlbum.h"; sourceTree = "<group>"; };
 		AC30E7E915EFCCA100CB38AC /* FacebookAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FacebookAlbum.m; path = "fb-video/FacebookAlbum.m"; sourceTree = "<group>"; };
 		AC30E7EE15F1240A00CB38AC /* Placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Placeholder.png; path = "fb-video/Placeholder.png"; sourceTree = "<group>"; };
+		AC30E8F615F27CF900CB38AC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AC30E94715F376EF00CB38AC /* PhotoAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoAlbumViewController.h; path = "fb-video/PhotoAlbumViewController.h"; sourceTree = SOURCE_ROOT; };
+		AC30E94815F376F000CB38AC /* PhotoAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoAlbumViewController.m; sourceTree = "<group>"; };
+		AC30E94A15F39E6400CB38AC /* FacebookPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookPhoto.h; sourceTree = "<group>"; };
+		AC30E94B15F39E6400CB38AC /* FacebookPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookPhoto.m; sourceTree = "<group>"; };
+		AC30E94D15F3ABC600CB38AC /* FacebookPhotoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookPhotoSource.h; sourceTree = "<group>"; };
+		AC30E94E15F3ABC700CB38AC /* FacebookPhotoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookPhotoSource.m; sourceTree = "<group>"; };
+		AC44CBF915F3D4A80034EAAA /* Three20.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Three20.bundle; path = ../three20/src/Three20.bundle; sourceTree = SOURCE_ROOT; };
 		AC5E904A15E3D6500079F65A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		AC5E905115E3F4E10079F65A /* FavoriteFriends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavoriteFriends.h; path = "fb-video/FavoriteFriends.h"; sourceTree = "<group>"; };
 		AC5E905215E3F4E10079F65A /* FavoriteFriends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavoriteFriends.m; path = "fb-video/FavoriteFriends.m"; sourceTree = "<group>"; };
 		AC5E905815E4D5850079F65A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AC875EF415F4A5EC00735533 /* libThree20.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libThree20.a; path = "../../../Downloads/facebook-three20-527051a/Build/Products/Debug-iphoneos/libThree20.a"; sourceTree = "<group>"; };
+		AC875EF515F4A5EC00735533 /* libThree20Core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libThree20Core.a; path = "../../../Downloads/facebook-three20-527051a/Build/Products/Debug-iphoneos/libThree20Core.a"; sourceTree = "<group>"; };
+		AC875EF615F4A5EC00735533 /* libThree20Network.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libThree20Network.a; path = "../../../Downloads/facebook-three20-527051a/Build/Products/Debug-iphoneos/libThree20Network.a"; sourceTree = "<group>"; };
+		AC875EF715F4A5EC00735533 /* libThree20Style.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libThree20Style.a; path = "../../../Downloads/facebook-three20-527051a/Build/Products/Debug-iphoneos/libThree20Style.a"; sourceTree = "<group>"; };
+		AC875EF815F4A5EC00735533 /* libThree20UI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libThree20UI.a; path = "../../../Downloads/facebook-three20-527051a/Build/Products/Debug-iphoneos/libThree20UI.a"; sourceTree = "<group>"; };
+		AC875EF915F4A5EC00735533 /* libThree20UICommon.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libThree20UICommon.a; path = "../../../Downloads/facebook-three20-527051a/Build/Products/Debug-iphoneos/libThree20UICommon.a"; sourceTree = "<group>"; };
+		AC875EFA15F4A5EC00735533 /* libThree20UINavigator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libThree20UINavigator.a; path = "../../../Downloads/facebook-three20-527051a/Build/Products/Debug-iphoneos/libThree20UINavigator.a"; sourceTree = "<group>"; };
 		ACC06A3115BAEB08009A751D /* fb-video.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fb-video.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC06A3515BAEB08009A751D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ACC06A3715BAEB08009A751D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -96,6 +123,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC875EFB15F4A5EC00735533 /* libThree20.a in Frameworks */,
+				AC875EFC15F4A5EC00735533 /* libThree20Core.a in Frameworks */,
+				AC875EFD15F4A5EC00735533 /* libThree20Network.a in Frameworks */,
+				AC875EFE15F4A5EC00735533 /* libThree20Style.a in Frameworks */,
+				AC875EFF15F4A5EC00735533 /* libThree20UI.a in Frameworks */,
+				AC875F0015F4A5EC00735533 /* libThree20UICommon.a in Frameworks */,
+				AC875F0115F4A5EC00735533 /* libThree20UINavigator.a in Frameworks */,
+				AC30E8F715F27CF900CB38AC /* QuartzCore.framework in Frameworks */,
 				AC5E905915E4D5850079F65A /* CoreData.framework in Frameworks */,
 				8B1C2CCC15E10DB200648891 /* AddressBook.framework in Frameworks */,
 				ACC06A3615BAEB08009A751D /* UIKit.framework in Frameworks */,
@@ -121,6 +156,15 @@
 		ACC06A2615BAEB07009A751D = {
 			isa = PBXGroup;
 			children = (
+				AC875EF415F4A5EC00735533 /* libThree20.a */,
+				AC875EF515F4A5EC00735533 /* libThree20Core.a */,
+				AC875EF615F4A5EC00735533 /* libThree20Network.a */,
+				AC875EF715F4A5EC00735533 /* libThree20Style.a */,
+				AC875EF815F4A5EC00735533 /* libThree20UI.a */,
+				AC875EF915F4A5EC00735533 /* libThree20UICommon.a */,
+				AC875EFA15F4A5EC00735533 /* libThree20UINavigator.a */,
+				AC44CBF915F3D4A80034EAAA /* Three20.bundle */,
+				AC30E8F615F27CF900CB38AC /* QuartzCore.framework */,
 				AC30E7EE15F1240A00CB38AC /* Placeholder.png */,
 				AC30E7E815EFCCA100CB38AC /* FacebookAlbum.h */,
 				AC30E7E915EFCCA100CB38AC /* FacebookAlbum.m */,
@@ -178,9 +222,15 @@
 				ACC06A3C15BAEB08009A751D /* Supporting Files */,
 				ACFAFA4115CE19E4006142B0 /* DefaultViewController.h */,
 				ACFAFA4215CE19E4006142B0 /* DefaultViewController.m */,
+				AC30E94715F376EF00CB38AC /* PhotoAlbumViewController.h */,
+				AC30E94815F376F000CB38AC /* PhotoAlbumViewController.m */,
+				AC30E94A15F39E6400CB38AC /* FacebookPhoto.h */,
+				AC30E94B15F39E6400CB38AC /* FacebookPhoto.m */,
+				AC30E94D15F3ABC600CB38AC /* FacebookPhotoSource.h */,
+				AC30E94E15F3ABC700CB38AC /* FacebookPhotoSource.m */,
 			);
 			path = "fb-video";
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		ACC06A3C15BAEB08009A751D /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -292,6 +342,7 @@
 				ACC06A5A15BAEB08009A751D /* second@2x.png in Resources */,
 				ACFAFA4015CD8E9F006142B0 /* FacebookSDKResources.bundle in Resources */,
 				AC30E7EF15F1240A00CB38AC /* Placeholder.png in Resources */,
+				AC44CBFA15F3D4A80034EAAA /* Three20.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +386,9 @@
 				AC5E905315E3F4E10079F65A /* FavoriteFriends.m in Sources */,
 				AC30E7E615EE830D00CB38AC /* AsyncImageView.m in Sources */,
 				AC30E7EA15EFCCA100CB38AC /* FacebookAlbum.m in Sources */,
+				AC30E94915F376F100CB38AC /* PhotoAlbumViewController.m in Sources */,
+				AC30E94C15F39E6400CB38AC /* FacebookPhoto.m in Sources */,
+				AC30E94F15F3ABC800CB38AC /* FacebookPhotoSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,7 +449,7 @@
 		ACC06A7015BAEB09009A751D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -412,16 +466,22 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"“$(BUILT_PRODUCTS_DIR)/../../three20″",
+					"”$(BUILT_PRODUCTS_DIR)/../three20″",
+					"\"../../Downloads/facebook-three20-527051a/Build/Products/three20\"",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "“$(BUILT_PRODUCTS_DIR)/../three20″ “$(BUILT_PRODUCTS_DIR)/../../three20″ \"../../../Downloads/facebook-three20-527051a/Build/Products/three20\"";
 			};
 			name = Debug;
 		};
 		ACC06A7115BAEB09009A751D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -431,10 +491,16 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"“$(BUILT_PRODUCTS_DIR)/../../three20″",
+					"”$(BUILT_PRODUCTS_DIR)/../three20″",
+					"\"../../Downloads/facebook-three20-527051a/Build/Products/three20\"",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "“$(BUILT_PRODUCTS_DIR)/../three20″ “$(BUILT_PRODUCTS_DIR)/../../three20″ \"../../../Downloads/facebook-three20-527051a/Build/Products/three20\"";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -442,6 +508,7 @@
 		ACC06A7315BAEB09009A751D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../FacebookSDK\"",
@@ -449,7 +516,15 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fb-video/fb-video-Prefix.pch";
 				INFOPLIST_FILE = "fb-video/fb-video-Info.plist";
-				"OTHER_LDFLAGS[arch=*]" = "-lsqlite3.0";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Downloads/facebook-three20-527051a/Build/Products/Debug-iphoneos\"",
+				);
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-lsqlite3.0",
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -458,6 +533,7 @@
 		ACC06A7415BAEB09009A751D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../FacebookSDK\"",
@@ -465,7 +541,15 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fb-video/fb-video-Prefix.pch";
 				INFOPLIST_FILE = "fb-video/fb-video-Info.plist";
-				"OTHER_LDFLAGS[arch=*]" = "-lsqlite3.0";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Downloads/facebook-three20-527051a/Build/Products/Debug-iphoneos\"",
+				);
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-lsqlite3.0",
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

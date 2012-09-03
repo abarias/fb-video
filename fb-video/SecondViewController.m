@@ -10,6 +10,7 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import "AsyncImageView.h"
 #import "FacebookAlbum.h"
+#import "PhotoAlbumViewController.h"
 
 #define kCustomRowsPerPage     100
 
@@ -130,6 +131,16 @@
     // Release any retained subviews of the main view.
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"showPhotos"]) {
+        NSIndexPath *indexPath = [self.myTableView indexPathForSelectedRow];
+        FacebookAlbum *album = (FacebookAlbum *)[self.facebookAlbums objectAtIndex:[indexPath row]];
+        PhotoAlbumViewController *albumViewController = [segue destinationViewController];
+        albumViewController.album = album;
+    }
+}
+
 #pragma mark -
 #pragma mark Table view data source methods
 
@@ -198,8 +209,9 @@
     if (indexPath.row == self.facebookAlbums.count) {
         self.pageCounter++;
         [self sendRequests];
+    } else {
+        
     }
- 
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
