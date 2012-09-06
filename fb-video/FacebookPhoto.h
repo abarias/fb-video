@@ -7,15 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Three20/Three20.h"
+//#import "Three20/Three20.h"
 
-@interface FacebookPhoto : NSObject <TTPhoto>
+//@interface FacebookPhoto : NSObject <TTPhoto>
+@interface FacebookPhoto : NSObject
 
 @property (nonatomic, copy) NSString *caption;
 @property (nonatomic, copy) NSString *urlLarge;
 @property (nonatomic, copy) NSString *urlSmall;
 @property (nonatomic, copy) NSString *urlThumb;
-@property (nonatomic, assign) id photoSource;
 @property (nonatomic) CGSize size;
 @property (nonatomic) NSInteger index;
 

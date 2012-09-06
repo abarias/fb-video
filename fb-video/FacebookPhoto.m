@@ -14,7 +14,7 @@
 @synthesize urlLarge = _urlLarge;
 @synthesize urlSmall = _urlSmall;
 @synthesize urlThumb = _urlThumb;
-@synthesize photoSource = _photoSource;
+//@synthesize photoSource = _photoSource;
 @synthesize size = _size;
 @synthesize index = _index;
 
@@ -28,7 +28,7 @@
         self.urlThumb = urlThumb;
         self.size = size;
         self.index = NSIntegerMax;
-        self.photoSource = nil;
+        //self.photoSource = nil;
     }
     return self;
 }
@@ -40,21 +40,21 @@
     self.urlThumb = nil;
 }
 
-#pragma mark TTPhoto
-
-- (NSString*)URLForVersion:(TTPhotoVersion)version {
-    switch (version) {
-        case TTPhotoVersionLarge:
-            return _urlLarge;
-        case TTPhotoVersionMedium:
-            return _urlLarge;
-        case TTPhotoVersionSmall:
-            return _urlSmall;
-        case TTPhotoVersionThumbnail:
-            return _urlThumb;
-        default:
-            return nil;
-    }
-}
+//#pragma mark TTPhoto
+//
+//- (NSString*)URLForVersion:(TTPhotoVersion)version {
+//    switch (version) {
+//        case TTPhotoVersionLarge:
+//            return _urlLarge;
+//        case TTPhotoVersionMedium:
+//            return _urlLarge;
+//        case TTPhotoVersionSmall:
+//            return _urlSmall;
+//        case TTPhotoVersionThumbnail:
+//            return _urlThumb;
+//        default:
+//            return nil;
+//    }
+//}
 
 @end

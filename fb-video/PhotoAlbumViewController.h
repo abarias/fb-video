@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Three20/Three20.h"
+#import "AQGridView.h"
+//#import "Three20/Three20.h"
 #import "FacebookAlbum.h"
 
-@interface PhotoAlbumViewController : TTThumbsViewController
+@interface PhotoAlbumViewController : UIViewController<AQGridViewDataSource, AQGridViewDelegate>
+{
+    AQGridView * _gridView;
+}
 
 @property (strong, nonatomic) FacebookAlbum *album;
+@property (strong, nonatomic) IBOutlet AQGridView *gridView;
 
 @end

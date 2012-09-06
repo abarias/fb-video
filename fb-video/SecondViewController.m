@@ -11,6 +11,7 @@
 #import "AsyncImageView.h"
 #import "FacebookAlbum.h"
 #import "PhotoAlbumViewController.h"
+#import "AQGridViewController.h"
 
 #define kCustomRowsPerPage     100
 
